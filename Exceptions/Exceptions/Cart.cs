@@ -21,5 +21,16 @@ namespace InternetShop
                 throw new InsufficientExecutionStackException();
             }
         }
+        public void Checkout()
+        {
+            if (products.Count != 0)
+            {
+                Console.WriteLine("The order is done");
+            }
+            else
+            {
+                throw new EmptyCartException();
+            }
+        }
     }
 }
